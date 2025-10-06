@@ -1,12 +1,13 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "note_app";
+$servername = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$dbname = getenv('DB_NAME');
+$port = getenv('DB_PORT') ?: 3306;
 
-$conn = mysqli_connect($host, $user, $pass, $dbname);
+$conn = new mysqli($servername, $user, $pass, $dbname, $port);
 
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+if (!$conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 ?>
