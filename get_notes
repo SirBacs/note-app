@@ -1,0 +1,13 @@
+<?php
+include __DIR__ . '/db.php';
+
+$sql = "SELECT * FROM notes ORDER BY id DESC";
+$result = mysqli_query($conn, $sql);
+
+$notes = [];
+while ($row = mysqli_fetch_assoc($result)) {
+  $notes[] = $row;
+}
+
+echo json_encode($notes);
+?>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Notes 📝</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>My Notes 🗒️</h1>
+      <p class="subtitle">Take notes. Stay organized.</p>
+    </header>
+
+    <section class="note-form">
+      <input type="text" id="title" placeholder="Enter a title..." />
+      <textarea id="content" placeholder="Write your note here..."></textarea>
+      <button id="addNoteBtn">➕ Add Note</button>
+    </section>
+
+    <section>
+      <h2>Your Notes</h2>
+      <div id="notesContainer" class="notes-grid"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
